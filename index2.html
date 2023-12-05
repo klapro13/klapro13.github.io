@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style2.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>Login Form</title>
+  <script>
+    
+    var clickCount = 0;
+
+    function validateForm() {
+      var email = document.getElementById('email').value;
+  
+      var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  
+      if (!emailRegex.test(email)) {
+        alert('Voer een geldig e-mailadres in ;)!');
+        return false;
+      }
+
+      
+      clickCount++;
+      
+      console.log('Button clicked ' + clickCount + ' times');
+      
+      return true;
+    }
+  </script>
+</head>
+<body>
+  <div class="container">
+    <div class="login">
+      <div class="container">
+        <h1>Register</h1>
+        <input type="email" id="email" name="email" placeholder="Email" required>
+        <input type="checkbox"><span>Remember me</span>
+        
+        <!-- Update the onclick attribute to call the validateForm function -->
+        <a href="index.html" class="btn" onclick="return validateForm();">
+          <button type="submit">Log in</button>
+        </a>
+       
+        <div class="clearfix"></div>
+      </div>
+    </div>
+    <div class="register">
+      <div class="container">
+        <h2>Hello, friend!</h2>
+        <p>Enter your personal details and start the journey with us!</p>
+        <div class="privacy policy">
+          <p>By creating an account, you agree to our privacy policy</p>
+          <a href="index3.html">
+            <button>Privacy Policy</button>
+          </a>
+        </div>
+      </div>
+    </div> 
+    <footer class="site-footer" id="footer">
+      <p class="site-footer__fineprint" id="fineprint">Copyright ©2023 | All Rights Reserved "KMO102b groep16"</p>
+    </footer> 
+  </div>
+</body>
+</html>
